@@ -24,6 +24,7 @@ Incluye:
 - `kong.yml` — configuraciones declarativas de Kong para enrutar a cada servicio.
 - `.env.example` — plantilla de variables de entorno para crear tu propio `.env`.
 - `.gitignore` — evita subir tu `.env` y otros archivos locales.
+- `SUPABASE_HERRAMIENTAS.md` — explicación didáctica de cada componente de Supabase, sus puertos y su uso.
 - `README.md` — documentación de uso y referencia.
 
 ---
