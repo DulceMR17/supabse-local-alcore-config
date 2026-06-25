@@ -1,0 +1,20 @@
+name: validate
+
+on:
+  push:
+    branches: ["main", "codex/**"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  oms-supabase:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate OMS Supabase package
+        run: ./scripts/check-oms-supabase.sh
+
+      - name: Render Docker Compose
+        run: docker compose --env-file .env.example config >/tmp/compose.yml

@@ -15,6 +15,8 @@ Incluye:
 - Postgres Meta
 - Studio
 - Kong API Gateway
+- Paquete OMS Backend con migraciones Supabase/Postgres normalizadas.
+- Mapping legacy -> normalizado para 1,180 tablas y 41,460 campos.
 
 ---
 
@@ -27,6 +29,10 @@ Incluye:
 - `CONTRIBUTING.md` — guía para contribuir al proyecto.
 - `LICENSE` — licencia abierta para uso y contribuciones.
 - `SUPABASE_HERRAMIENTAS.md` — explicación didáctica de cada componente de Supabase, sus puertos y su uso.
+- `supabase/` — configuración Supabase CLI, migraciones OMS, seed y tests SQL.
+- `docs/oms/` — documentación, mapping y runbooks para integrar `oms-backend`.
+- `scripts/` — validaciones y aplicación manual de migraciones OMS.
+- `Makefile` — comandos operativos para levantar, validar y aplicar el ecosistema.
 - `README.md` — documentación de uso y referencia.
 
 ---
@@ -58,6 +64,53 @@ docker compose ps
 ```text
 http://localhost:8000
 ```
+
+---
+
+## 🧩 Ecosistema OMS Backend
+
+Este repo ahora incluye la base Supabase/Postgres para el proyecto `oms-backend`.
+
+Cobertura incorporada:
+
+- `1,180` tablas legacy mapeadas.
+- `41,460` campos legacy mapeados.
+- `32,726` rutas JSONB para formularios y datos variables.
+- `26` tablas destino normalizadas en schemas `oms`, `ref`, `legacy` y `staging`.
+
+Archivos principales:
+
+- `supabase/config.toml`
+- `supabase/migrations/`
+- `supabase/seed.sql`
+- `supabase/tests/001_migration_quality_checks.sql`
+- `docs/oms/README.md`
+- `docs/oms/RUNBOOK_LOCAL.md`
+- `docs/oms/RUNBOOK_BACKEND_INTEGRATION.md`
+- `docs/oms/SECURITY_RLS.md`
+- `docs/oms/MIGRATION_PIPELINE.md`
+- `docs/oms/SUPABASE_COMPONENT_MATRIX.md`
+- `docs/oms/OPERATIONS_CHECKLIST.md`
+- `docs/oms/SUPABASE_2026_NOTES.md`
+- `docs/oms/API_USER_TYPES_STUDENTS.md`
+- `docs/oms/legacy_to_canonical_mapping.csv`
+- `docs/oms/table_to_entity_mapping.csv`
+
+Validar estructura:
+
+```bash
+make check
+```
+
+Aplicar migraciones OMS con `psql`:
+
+```bash
+export DATABASE_URL='postgres://postgres:TU_PASSWORD@127.0.0.1:5432/postgres'
+make apply-oms
+make validate-oms
+```
+
+> No subas `.env`, tokens reales ni claves `service_role`.
 
 ---
 
