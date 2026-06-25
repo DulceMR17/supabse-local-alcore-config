@@ -1,7 +1,12 @@
 .env
+.env.*
+!.env.example
 
 # Docker artifacts
 *.log
 *.tmp
 
 docker-compose.override.yml
+.supabase/
+tmp/
+node_modules/
