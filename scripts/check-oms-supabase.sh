@@ -24,6 +24,8 @@ required_files=(
   "docs/oms/SECURITY_RLS.md"
   "docs/oms/MIGRATION_PIPELINE.md"
   "docs/oms/SUPABASE_COMPONENT_MATRIX.md"
+  "docs/oms/OPERATIONS_CHECKLIST.md"
+  "docs/oms/SUPABASE_2026_NOTES.md"
 )
 
 for file in "${required_files[@]}"; do

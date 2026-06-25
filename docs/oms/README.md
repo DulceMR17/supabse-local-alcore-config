@@ -43,9 +43,11 @@ Makefile
 3. `docs/oms/SECURITY_RLS.md`
 4. `docs/oms/MIGRATION_PIPELINE.md`
 5. `docs/oms/SUPABASE_COMPONENT_MATRIX.md`
-6. `docs/oms/table_to_entity_mapping.csv`
-7. `docs/oms/legacy_to_canonical_mapping.csv`
-8. `supabase/migrations/`
+6. `docs/oms/OPERATIONS_CHECKLIST.md`
+7. `docs/oms/SUPABASE_2026_NOTES.md`
+8. `docs/oms/table_to_entity_mapping.csv`
+9. `docs/oms/legacy_to_canonical_mapping.csv`
+10. `supabase/migrations/`
 
 ## Principio de consumo
 
