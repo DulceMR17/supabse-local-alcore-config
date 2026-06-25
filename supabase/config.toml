@@ -49,6 +49,16 @@ allowed_mime_types = [
 ]
 objects_path = "./storage/oms-documents"
 
+[storage.buckets.oms-legacy-imports]
+public = false
+file_size_limit = "100MiB"
+allowed_mime_types = [
+  "text/csv",
+  "application/json",
+  "application/octet-stream"
+]
+objects_path = "./storage/oms-legacy-imports"
+
 [auth]
 enabled = true
 site_url = "http://localhost:3000"
@@ -70,6 +80,10 @@ otp_expiry = 3600
 enabled = true
 policy = "oneshot"
 inspector_port = 8083
+
+[functions.oms-health]
+enabled = true
+verify_jwt = false
 
 [analytics]
 enabled = false

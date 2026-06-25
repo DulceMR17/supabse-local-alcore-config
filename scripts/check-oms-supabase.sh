@@ -15,10 +15,15 @@ required_files=(
   "supabase/migrations/20260615000300_oms_seed_reference_data.sql"
   "supabase/migrations/20260615000400_oms_transform_case_requests.sql"
   "supabase/migrations/20260615000500_oms_transform_reference_entities.sql"
+  "supabase/migrations/20260615000600_oms_rls_baseline.sql"
   "supabase/tests/001_migration_quality_checks.sql"
+  "supabase/functions/oms-health/index.ts"
   "docs/oms/legacy_to_canonical_mapping.csv"
   "docs/oms/table_to_entity_mapping.csv"
   "docs/oms/normalization_summary.json"
+  "docs/oms/SECURITY_RLS.md"
+  "docs/oms/MIGRATION_PIPELINE.md"
+  "docs/oms/SUPABASE_COMPONENT_MATRIX.md"
 )
 
 for file in "${required_files[@]}"; do

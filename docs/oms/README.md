@@ -40,9 +40,12 @@ Makefile
 
 1. `docs/oms/RUNBOOK_LOCAL.md`
 2. `docs/oms/RUNBOOK_BACKEND_INTEGRATION.md`
-3. `docs/oms/table_to_entity_mapping.csv`
-4. `docs/oms/legacy_to_canonical_mapping.csv`
-5. `supabase/migrations/`
+3. `docs/oms/SECURITY_RLS.md`
+4. `docs/oms/MIGRATION_PIPELINE.md`
+5. `docs/oms/SUPABASE_COMPONENT_MATRIX.md`
+6. `docs/oms/table_to_entity_mapping.csv`
+7. `docs/oms/legacy_to_canonical_mapping.csv`
+8. `supabase/migrations/`
 
 ## Principio de consumo
 

@@ -87,6 +87,9 @@ Archivos principales:
 - `docs/oms/README.md`
 - `docs/oms/RUNBOOK_LOCAL.md`
 - `docs/oms/RUNBOOK_BACKEND_INTEGRATION.md`
+- `docs/oms/SECURITY_RLS.md`
+- `docs/oms/MIGRATION_PIPELINE.md`
+- `docs/oms/SUPABASE_COMPONENT_MATRIX.md`
 - `docs/oms/legacy_to_canonical_mapping.csv`
 - `docs/oms/table_to_entity_mapping.csv`
 
